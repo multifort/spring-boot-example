@@ -1,0 +1,21 @@
+server:
+  port: 8089
+
+spring:
+  application:
+    name: spring-liquibase
+  #配置数据库数据源
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mysql://10.20.1.182:3306/spring-test?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8
+    username: root
+    password: 123456
+  #配置JPA
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+  #配置数据库版本管理
+  liquibase:
+    enabled: true
+    change-log: classpath:/db/changelog/db.changelog-master.yaml

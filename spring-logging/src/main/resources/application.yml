@@ -1,0 +1,15 @@
+server:
+  port: 8089
+
+#应用程序日志配置
+logging:
+  config: classpath:file-logging-config.xml
+  level: info
+  path: /var/log/
+  file:
+    max-history: 30
+    max-size: 10M
+
+logback:
+  appname: file-logging-demo
+  dir: log

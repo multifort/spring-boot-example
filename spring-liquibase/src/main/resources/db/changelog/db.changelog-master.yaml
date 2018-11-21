@@ -1,0 +1,53 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: ruffy
+      changes:
+        - createTable:
+            catalogName: spring-test
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: firstname
+                  type: varchar(50)
+              - column:
+                  name: lastname
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: state
+                  type: char(2)
+            remarks: A String
+            schemaName: public
+            tableName: person
+            tablespace: A String
+
+  - changeSet:
+      id: 5
+      author: ruffy
+      changes:
+        - sqlFile:
+            encoding: utf8
+            path: classpath:/db/changelog/sqlfile/test.sql
+
+  - changeSet:
+        id: 6
+        author: ruffy
+        changes:
+          - sqlFile:
+              encoding: utf8
+              path: classpath:/db/changelog/sqlfile/test6.sql
+  - changeSet:
+          id: 7
+          author: ruffy
+          changes:
+            - sqlFile:
+                encoding: utf8
+                path: classpath:/db/changelog/sqlfile/test7.sql
