@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: ruffy
+      changes:
+        - sqlFile:
+            encoding: utf8
+            path: classpath:db/sqlfile/book.sql

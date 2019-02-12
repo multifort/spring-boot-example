@@ -1,7 +1,0 @@
-server:
-  port: 8081 # Server port
-
-spring:
-  application:
-    name: springboot-microservice-demo # Application config name
-

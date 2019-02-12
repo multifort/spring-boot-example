@@ -10,8 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 
 @RestController
 @Slf4j
-@RequestMapping(value = "/query", produces = "application/json; charset=UTF-8")
-public class QueryController {
+@RequestMapping(value = "/books", produces = "application/json; charset=UTF-8")
+public class BookDemoController {
 
     @Resource
     private QueryService queryService;
