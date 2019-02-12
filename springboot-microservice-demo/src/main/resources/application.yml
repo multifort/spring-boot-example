@@ -20,10 +20,40 @@ spring:
     enabled: true
     change-log: classpath:db/db.changelog-master.yaml
 
+# 应用程序API接口文档配置
+# 基础信息配置
+swagger:
+  enabled: true
+  title: springboot-microservice-demo
+  description: springboot 微服务项目
+  version: 1.0.0-SNAPSHOT
+  base-package: com.springboot.microservice.demo
+  # 增加全局配置参数
+  # global-operation-parameters[0]:
+#    name: access_token
+#    description: user access token
+#    modelRef: string
+#    parameterType: header
+#    required: true
+#  global-operation-parameters[1]:
+#    name: timestamp
+#    description: access timestamp
+#    modelRef: int
+#    parameterType: header
+#    required: false
+#  # 通用返回错误配置
+#  apply-default-response-messages: true
+#  global-response-message.get[0]:
+#      code: 401
+#      message: 401错误
+#  global-response-message.get[1]:
+#      code: 500
+#      message: 服务器错误
+
+
 # 应用程序日志配置
 logging:
   config: classpath:log/file-logging-config.xml # 日志配置文件
-
 logback:
   dir: logfile # 日志文件输出路径
 
