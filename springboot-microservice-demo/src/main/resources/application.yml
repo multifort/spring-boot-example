@@ -50,13 +50,19 @@ swagger:
 #      code: 500
 #      message: 服务器错误
 
-
 # 应用程序日志配置
 logging:
   config: classpath:log/file-logging-config.xml # 日志配置文件
 logback:
   dir: logfile # 日志文件输出路径
 
-
+# Keycloak Configuration
+keycloak:
+  auth-server-url: http://keycloak.10.20.1.72.nip.io/auth
+  realm: SpringBootKeycloak
+  resource: login-app
+  credentials:
+    secret: 6a2d7ae1-390b-4769-9f7e-45a649b72368
+  principal-attribute: preferred_username
 
 
