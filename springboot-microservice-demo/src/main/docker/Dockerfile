@@ -6,7 +6,8 @@ ENV TZ=Asia/Shanghai
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 CMD echo "The application will start in ${JHIPSTER_SLEEP}s..." && \
     sleep ${JHIPSTER_SLEEP} && \
-    java ${JAVA_OPTS} -Djava.security.egd=file:/dev/./urandom -jar /app.@project.packaging@
+    java ${JAVA_OPTS} -Djava.security.egd=file:/dev/./urandom -jar /app.jar
+    # java ${JAVA_OPTS} -Djava.security.egd=file:/dev/./urandom -jar /app.@project.packaging@
 
 EXPOSE 8081
-ADD @project.build.finalName@.@project.packaging@ /app.@project.packaging@
+ADD springboot-microservice-demo.jar /app.jar
