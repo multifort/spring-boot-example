@@ -1,5 +1,5 @@
 FROM openjdk:8-jre-alpine
-ENV TZ=Asia/Shanghai
+ENV TZ=Asia/Shanghai \
     SPRING_OUTPUT_ANSI_ENABLED=ALWAYS \
     JAVA_OPTS="" \
     JHIPSTER_SLEEP=0
