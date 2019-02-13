@@ -212,6 +212,10 @@
                         <goals>
                             <goal>tag</goal>
                         </goals>
+                        <configuration>
+                            <image>${project.build.finalName}:${project.version}</image>
+                            <newName>${docker.registry.name}/${project.build.finalName}:${project.version}</newName>
+                        </configuration>
                     </execution>
                     <!--暂时不添加推送仓库的配置-->
                 </executions>
@@ -229,5 +233,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>
