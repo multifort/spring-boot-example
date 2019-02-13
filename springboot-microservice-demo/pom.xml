@@ -198,6 +198,23 @@
                 <groupId>com.spotify</groupId>
                 <artifactId>docker-maven-plugin</artifactId>
                 <version>1.2.0</version>
+                <executions>
+                    <execution>
+                        <id>build-image</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>build</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>tag-image</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>tag</goal>
+                        </goals>
+                    </execution>
+                    <!--暂时不添加推送仓库的配置-->
+                </executions>
                 <configuration>
                     <dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory>
                     <imageName>${project.build.finalName}:${project.version}</imageName>
